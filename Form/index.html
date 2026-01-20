@@ -10,11 +10,24 @@
 </head>
 
 <body>
+    <form id="form" class="container my-5 p-5">
+        <div class="mb-5">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button id="cancel" type="button" class="btn btn-danger">Cancel</button>
+    </form>
+
+    <div class="container p-5">
+        <h4>Previous:</h4>
+        <ul id="previousList"></ul>
+    </div>
 
 
 
-
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
