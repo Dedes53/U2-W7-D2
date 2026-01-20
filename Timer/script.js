@@ -3,7 +3,6 @@ const savedTime = "savedTime";
 let time = 0;
 
 // verifichiamo se ci sia o meno del tempo già trasorso, se si lo impostiamo come base da cui partire
-
 if (sessionStorage.getItem(savedTime) === null) { time = 0; }
 else {
     time = isNaN(parseInt(sessionStorage.getItem(savedTime))) ? 0 : parseInt(sessionStorage.getItem(savedTime));
