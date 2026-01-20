@@ -3,6 +3,8 @@ const cancel = document.getElementById('cancel');
 const savedUser = "user";
 const userList = document.getElementById('previousList');
 
+
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -12,20 +14,27 @@ form.addEventListener('submit', function (event) {
     sessionStorage.setItem(savedUser, user); // salviamo il valore del campo input come variabile nel sessionStorage
 
     form.reset(); // resettiamo il form
+    previousUser();
 });
 
 cancel.addEventListener('click', function () {
     sessionStorage.removeItem(savedUser);
+    previousUser();
 })
 
 const previousUser = function () {
 
+
     const previously = sessionStorage.getItem(savedUser) // leggiamo il valore salvato nel sessionStorage
-    const liUser = document.createElement("li");
+    const liUser = document.createElement("li"); // creiamo l'elemento li 
 
     if (previously === null) {
-
+        liUser.innerText = "Complimenti sei il primo"
+    } else {
+        liUser.innerText = previously;
     }
 
     userList.appendChild(liUser);
 }
+
+previousUser();
