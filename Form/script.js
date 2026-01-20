@@ -1,6 +1,7 @@
 const form = document.getElementById('form');
 const cancel = document.getElementById('cancel');
 const savedUser = "user";
+const userList = document.getElementById('previousList');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -17,3 +18,14 @@ cancel.addEventListener('click', function () {
     sessionStorage.removeItem(savedUser);
 })
 
+const previousUser = function () {
+
+    const previously = sessionStorage.getItem(savedUser) // leggiamo il valore salvato nel sessionStorage
+    const liUser = document.createElement("li");
+
+    if (previously === null) {
+
+    }
+
+    userList.appendChild(liUser);
+}
