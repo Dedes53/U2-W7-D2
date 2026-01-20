@@ -23,7 +23,7 @@ cancel.addEventListener('click', function () {
 })
 
 const previousUser = function () {
-
+    userList.innerHTML = ""; // puliamo la lista ad ogni esecuzione della funzione
 
     const previously = sessionStorage.getItem(savedUser) // leggiamo il valore salvato nel sessionStorage
     const liUser = document.createElement("li"); // creiamo l'elemento li 
