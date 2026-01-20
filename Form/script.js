@@ -28,6 +28,7 @@ const previousUser = function () {
     const previously = sessionStorage.getItem(savedUser) // leggiamo il valore salvato nel sessionStorage
     const liUser = document.createElement("li"); // creiamo l'elemento li 
 
+    // impostiamo cosa stampare nell'elemento li in base al contenuto del sessionStorage
     if (previously === null) {
         liUser.innerText = "Complimenti sei il primo"
     } else {
